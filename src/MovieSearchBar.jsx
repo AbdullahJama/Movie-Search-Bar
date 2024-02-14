@@ -1,4 +1,5 @@
 import MovieForm from "./MovieForm";
+import MovieForm2 from "./MovieForm2";
 import React from "react";
 import "./App.css";
 import Card from "@mui/material/Card";
@@ -74,62 +75,19 @@ export default function MovieSearchBar() {
 
   return (
     <div>
-      {!responseData.data && responseData.loading ? (
+      {!responseData.data ? (
         <MovieForm movieName={movieName} />
       ) : (
-        <MovieForm
-          movieName={movieName}
-          inputStyle={{
-            width: "300px",
-            height: "25px",
-            borderRadius: "30px",
-            marginRight: "15px",
-            marginleft: "0px",
-            marginTop: "0px",
-            fontSize: "15px",
-          }}
-          buttonStyle={{
-            borderRadius: "20px",
-            marginTop: "7px",
-            marginRight: "0px",
-            marginLeft: "10px",
-            fontSize: "15px",
-            padding: "0px",
-            height: "35px",
-            width: "90px",
-          }}
-          containerStyle={{
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "flex-start",
-            justifyContent: "flex-start",
-            height: "10vh",
-            marginTop: "10px",
-          }}
-          h1Style={{
-            fontSize: "30px",
-            margin: "0px",
-            marginRight: "20px",
-            marginTop: "5px",
-          }}
-        />
+        <MovieForm2 movieName={movieName} />
       )}
 
       {responseData.data && (
         <div className="cardContainer">
-          <Card
-            className="movieCard"
-            sx={{
-              borderRadius: "30px",
-              border: "3px solid orange",
-              outline: "none",
-            }}
-          >
+          <Card className="movieCard">
             <CardMedia
-              sx={{ width: "100%", height: "100%" }}
+              className="cardMedia"
               component="img"
               alt="Movie Poster"
-              height="140"
               image={responseData.data.poster_path}
             />
             <div className="layover">
@@ -138,55 +96,16 @@ export default function MovieSearchBar() {
                   gutterBottom
                   variant="h5"
                   component="div"
-                  sx={{
-                    color: "white",
-                    position: "relative",
-                    bottom: "23px",
-                    fontSize: "25px",
-                    fontWeight: "30px",
-                  }}
+                  className="cardTitle"
                 >
                   {responseData.data.title}
                 </Typography>
-                <span
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    position: "relative",
-                    bottom: "40px",
-                  }}
-                >
-                  <Typography
-                    sx={{
-                      color: "white",
-                      fontSize: "17px",
-                      position: "relative",
-                      bottom: "-10px",
-                    }}
-                  >
+                <span className="detailContainer">
+                  <Typography className="genreData">
                     {truncateGenre(responseData.data.genres, 1)}
                   </Typography>
-                  ""
-                  <Typography
-                    sx={{
-                      color: "white",
-                      fontSize: "17px",
-                      position: "relative",
-                      bottom: "-10px",
-                    }}
-                  >
-                    {" "}
-                    |{" "}
-                  </Typography>
-                  ""
-                  <Typography
-                    sx={{
-                      color: "white",
-                      fontSize: "17px",
-                      position: "relative",
-                      bottom: "-10px",
-                    }}
-                  >
+                  "<Typography className="genreData"> | </Typography>"
+                  <Typography className="genreData">
                     {responseData.data.release_date}
                   </Typography>
                 </span>
@@ -194,19 +113,12 @@ export default function MovieSearchBar() {
                 <Typography
                   variant="body2"
                   color="text.secondary"
-                  sx={{
-                    color: "white",
-                    fontSize: "20px",
-                    position: "relative",
-                    right: "15px",
-                    bottom: "25px",
-                    overflow: "hidden",
-                  }}
+                  className="overView"
                 >
                   {truncateText(responseData.data.overview, 150)}
                 </Typography>
 
-                <Typography sx={{ color: "white" }}></Typography>
+                <Typography></Typography>
               </CardContent>
               <CardActions>
                 <button

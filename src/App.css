@@ -1,108 +1,111 @@
 body {
-
   margin: 0;
+  width: 100%;
+  min-height: 120vh;
   padding: 0;
-  height: 100vh;
-  font-family : sans-serif;
+  font-family: sans-serif;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://i.ibb.co/fq0JQ7c/Pngtree-tickets-popcorn-and-3d-glasses-13348574.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+/*card style start */
+
+.movieCard {
+  position: relative;
+  width: 400px;
+  height: 600px;
+  color: white;
+  border-radius: 30px !important;
+  border: 3px solid orange;
+  outline: none;
+}
+
+.cardMedia {
+  width: 100%;
+  height: 100%;
+}
+
+.cardTitle {
+  color: white;
+  position: relative;
+  bottom: 20px;
   font-size: 25px;
-  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
-  url("https://i.ibb.co/fq0JQ7c/Pngtree-tickets-popcorn-and-3d-glasses-13348574.jpg");
-  background-size: cover; 
-  background-repeat: no-repeat; 
-  opacity:1;
-
-
+  font-weight: 30px;
 }
 
-h1{  
-  font-size:70px;
-  color:white;
-  margin-right:30px;
-  margin-top: 10px;
-  margin-bottom: 25px;
+.stylemovie3 {
+  color: yellowgreen;
 }
 
-
-.movieForm{
-  display:flex;
+.cardContainer {
+  display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items:center;
-  height: 80vh;
-}
-
-  
-
-
-
-
-input{
-  width: 400px;
-  height: 40px;
-  border-radius: 30px;
-  margin-right: 30px;
-  margin-top: 20px;
-  margin-bottom: 13px;
-  font-family: sans-serif;
-  font-size: 20px;
-  font-weight: bold;
-  color: white;
-  padding: 8px; 
-  background-color: rgb(48, 48, 48);
-  
- border: 3px solid rgba(255, 255, 255, 0.5); 
-
-
-
-
-}
-
-input:hover {
-  border-color: white 
-}
-
-
-input:focus {
-  border-color: orange; 
-  outline: none
-
-}
-
-
-
-
-
-
-
- .movieCard{
-position: relative;
-  width: 400px;
-   height: 600px;
-   color:white;
-   /*margin-left:750px;
-   margin-top: 0px;
-margin-bottom: 70px;*/
-   
-}
-
-.stylemovie3{
-  color:yellowgreen;
-
-}
-
-.cardContainer{
-  display: flex;
-  height: 100%;
-  flex-direction:column;
-  justify-content: center;
   align-items: center;
+  /* background-color: orange;*/
 }
 
+.detailContainer {
+  display: inline-block;
+  position: relative !important;
+  bottom: 40px !important;
+}
 
+.genreData {
+  color: white !important;
+  font-size: 17px !important;
+  position: relative !important;
+  top: 20px !important;
+  display: inline-block;
+  text-align: center;
+}
 
+.overView {
+  color: white !important;
+  font-size: 20px !important;
+  position: relative !important;
+  right: 15px !important;
+  bottom: 15px !important;
+  overflow: hidden !important;
+}
 
+.myButton1 {
+  display: inline-block;
+  padding: 5px 20px; /* Adjust padding to change button size */
+  font-weight: 300 !important;
+  font-size: 23px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid white; /* Border color */
+  border-radius: 10px; /* Rounded corners */
+  background-color: #333; /* Button color */
+  color: #fff; /* Text color */
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+  position: relative;
+  left: 30px !important;
+  bottom: 30px;
+}
 
-
+.myButton2 {
+  display: inline-block;
+  padding: 5px 20px; /* Adjust padding to change button size */
+  font-size: 23px;
+  font-weight: 300 !important;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid white; /* Border color */
+  border-radius: 10px; /* Rounded corners */
+  background-color: #333; /* Button color */
+  color: #fff; /* Text color */
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+  position: relative;
+  right: 70px !important;
+  bottom: 30px;
+}
 
 .layover {
   width: 100%;
@@ -110,8 +113,8 @@ margin-bottom: 70px;*/
   position: absolute;
   /*top: 370px;
   left: 0px;*/
-  top:349px;
-  left:0px;
+  top: 349px;
+  left: 0px;
   background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent white background */
   padding: 20px; /* Add padding for content inside the layover */
   border-radius: 10px;
@@ -122,116 +125,145 @@ margin-bottom: 70px;*/
   z-index: 1; /* Ensure the layover appears above other elements */
 }
 
-
-
-.buttonStyle{
-  color: white;
-  width: 120px;
-  font-size: 20px;
-  height: 45px;
-  font-weight: bold;
-  margin:30px;
-  margin-right: 70px;
-  border-radius: 20px;
-  background-color: #333;
-  border: 2px solid white; /* Border color */
-  outline: none;
-  /*background-color: #666; /* Button color */
-  transition: background-color 0.3s ease; /* Smooth transition on hover */
-  font-weight: bold;
-  
-
-
-
-}
-
-.myButton1{
-    display: inline-block;
-  padding: 5px 10px; /* Adjust padding to change button size */
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center;
-  text-decoration: none;
-  border: 2px solid white; /* Border color */
-  border-radius: 15px; /* Rounded corners */
-  background-color: #333; /* Button color */
-  color: #fff; /* Text color */
-  transition: background-color 0.3s ease; /* Smooth transition on hover */
-  position: relative;
-  left: 70px;
-  bottom: 30px;
-
-
-  
-}
-
-.myButton2 {
-  display: inline-block;
-  padding: 5px 10px; /* Adjust padding to change button size */
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center;
-  text-decoration: none;
-  border: 2px solid white; /* Border color */
-  border-radius: 15px; /* Rounded corners */
-  background-color: #333; /* Button color */
-  color: #fff; /* Text color */
-  transition: background-color 0.3s ease; /* Smooth transition on hover */
-  position: relative;
-  right: 110px;
-  bottom: 30px;
-  
-}
-
-
 .myButton1:hover:hover,
-.myButton2:hover:hover,
-.buttonStyle:hover{
+.myButton2:hover:hover {
   background-color: #333; /* Darker shade on hover */
   cursor: pointer;
   outline: none;
   border: 3px solid orange;
-  
 }
 
+@media screen and (max-width: 600px) {
+  body {
+    width: 100% !important;
+  }
+  .cardMedia {
+    width: 100%;
+    height: 50% !important;
+  }
+  .cardContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: orange;*/
+  }
 
-@media only screen and (max-width: 600px) {
-  /* Styles for small screens, such as mobile phones in portrait mode */
-  h1{
-    font-size: 30px;
+  .movieCard {
+    position: static;
+    width: 90%;
+    height: 70vh;
+    color: white;
+    border-radius: 30px !important;
+    border: 3px solid orange;
+    outline: none;
+    text-align: start !important;
   }
-  input{
-    width:300px;
-    height:30px;
-    border-radius: 20px;
-  }
-  .buttonStyle{
-    width: 130px;
-    height:40px;
-    font-size:20px;
-    font-weight: 15px;
-  }
-  .movieCard{
 
-width: 370px;
-margin-left: 0px;
-
+  .myButton1 {
+    padding: 5px 10px; /* Adjust padding to change button size */
+    font-size: 5vw;
+    border-radius: 5px;
+    position: relative;
+    top: -30px !important;
   }
-  .myButton1{
-position: relative;
-bottom:25px;
-margin-right:20px ;
-padding:5px;
-font-size: 20px;
+  .myButton2 {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 5vw;
+    position: relative;
+    top: -30px !important;
+  }
+  .overView {
+    font-size: 4vw !important;
+    font-weight: 10 !important;
+    position: static;
+    top: -50px !important;
+  }
+  .genreData {
+    font-size: 2.5vw !important;
+    position: relative;
+    top: -30px !important;
+
+    order: 2;
+  }
+  .cardTitle {
+    top: -65px;
+    bottom: 0;
+    font-size: 5vw !important;
+    position: relative;
+    order: 1 !important;
+  }
+  .layover {
+    min-height: 40vh;
+    bottom: 0;
+    position: static;
+    display: flex;
+    max-width: 100%;
+  }
 }
-  .myButton2{
-position: relative;
-bottom:25px;
-left:-90px;
-padding:5px;
-font-size: 20px;
 
+@media screen and (max-width: 279px) {
+  .cardMedia {
+    width: 100%;
+    height: 50% !important;
+  }
+
+  .movieCard {
+    position: static;
+    width: 90%;
+    height: 60vh !important;
+    color: white;
+    border-radius: 30px !important;
+    border: 3px solid orange;
+    outline: none;
+    text-align: start !important;
+  }
+  .myButton1 {
+    padding: 5px 10px; /* Adjust padding to change button size */
+    font-size: 5vw;
+    border-radius: 5px;
+    position: relative;
+    top: -60px !important;
+    left: 10px !important;
+  }
+  .myButton2 {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 5vw;
+    position: relative;
+    top: -60px !important;
+    right: 40px !important;
+  }
+  @media screen and (max-width: 210px) {
+    .cardContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .movieCard {
+      height: 50vh !important;
+    }
+    .genreData {
+      top: -60px !important;
+    }
+    .overView {
+      top: -90px !important;
+    }
+    .cardTitle {
+      top: -100px;
+      bottom: 0;
+      font-size: 5vw !important;
+      position: relative;
+    }
+
+    .myButton1 {
+      top: -90px !important;
+      left: -18px !important;
+    }
+    .myButton2 {
+      top: -90px !important;
+      right: 25px !important;
+    }
+  }
 }
-
-}
-

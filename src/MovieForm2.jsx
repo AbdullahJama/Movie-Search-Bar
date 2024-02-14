@@ -1,17 +1,9 @@
 import React from "react";
 import { useState } from "react";
-import "./App.css";
 import SearchIcon from "@mui/icons-material/Search";
-import "./MovieForm.css";
+import "./MovieForm2.css";
 
-export default function ({
-  movieName,
-  /*
-  inputStyle,
-  buttonStyle,
-  containerStyle,
-  h1Style,*/
-}) {
+export default function ({ movieName }) {
   const [movie, setMovie] = useState("");
   const changeHandle = (e) => {
     setMovie((m) => e.target.value);
@@ -26,17 +18,13 @@ export default function ({
   return (
     <form
       // style={containerStyle}
-      className="movieForm"
+      className="containerStyle"
       onSubmit={submitHandle}
     >
-      <h1
-      // style={h1Style}
-      >
-        DownTime
-      </h1>
+      <h1 className="h1No2">DownTime</h1>
 
       <input
-        // style={inputStyle}
+        className="input2"
         type="text"
         value={movie}
         onChange={changeHandle}
@@ -45,7 +33,7 @@ export default function ({
       <button
         onClick={submitHandle}
         variant="contained"
-        className="buttonStyle"
+        className="buttonStyle2"
         //style={buttonStyle}
       >
         Search
