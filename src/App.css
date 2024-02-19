@@ -11,6 +11,16 @@ body {
   overflow: hidden;
 }
 
+/* loader style start*/
+.rotating-lines-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  width: 100%;
+}
+/* loader style end*/
+
 /*card style start */
 
 .movieCard {

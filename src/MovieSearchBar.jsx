@@ -9,6 +9,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { RotatingLines } from "react-loader-spinner";
 
 export default function MovieSearchBar() {
   const [formData, setData] = useState("");
@@ -75,10 +76,25 @@ export default function MovieSearchBar() {
 
   return (
     <div>
-      {!responseData.data ? (
+      {!responseData.data && !formData ? (
         <MovieForm movieName={movieName} />
       ) : (
         <MovieForm2 movieName={movieName} />
+      )}
+
+      {!responseData.data && formData && (
+        <div className="rotating-lines-container">
+          <RotatingLines
+            visible={true}
+            height="700px"
+            strokeColor="orange"
+            width=" 15vw"
+            strokeWidth="5"
+            animationDuration="0.75"
+            ariaLabel="rotating-lines-loading"
+            wrapperClass="rotating-lines"
+          />
+        </div>
       )}
 
       {responseData.data && (
